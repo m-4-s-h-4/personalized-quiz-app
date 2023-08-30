@@ -3,7 +3,9 @@ import axios from 'axios';
 import './App.css';
 import quizData from './quizData';
 
-const BACKED_URL = process.env.BACKED_URL;
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+
+console.log(BACKEND_URL)
 
 function App() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -40,7 +42,7 @@ function App() {
     // render the final results
 
       if (!boxIdeas) {
-        axios.post(BACKED_URL + 'generate-box-ideas', { answers: Object.values(answers) })
+        axios.post(BACKEND_URL + 'generate-box-ideas', { answers: Object.values(answers) })
           .then(response => {
             setBoxIdeas(response.data);
           })
