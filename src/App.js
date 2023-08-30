@@ -3,6 +3,8 @@ import axios from 'axios';
 import './App.css';
 import quizData from './quizData';
 
+const BACKED_URL = process.env.BACKED_URL;
+
 function App() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState({});
@@ -17,6 +19,8 @@ function App() {
   };
 
   const renderQuestions = () => {
+    // render the questions
+
     if (currentQuestionIndex < quizData.length) {
       const currentQuestion = quizData[currentQuestionIndex];
       const options = currentQuestion.options;
@@ -33,13 +37,16 @@ function App() {
         </div>
       );
     } else {
+    // render the final results
+
       if (!boxIdeas) {
-        axios.post('http://localhost:3001/api/generate-box-ideas', { answers: Object.values(answers) })
+        axios.post(BACKED_URL + 'generate-box-ideas', { answers: Object.values(answers) })
           .then(response => {
             setBoxIdeas(response.data);
           })
           .catch(error => {
             console.error('Error generating box ideas:', error);
+            setBoxIdeas('None');
           });
       }
 
