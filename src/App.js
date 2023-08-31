@@ -6,8 +6,9 @@ import './App.css';
 import quizData from './quizData';
 import BoxIdeasList from './BoxIdeasList';
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:3001/api/';
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || 'https://ec2-3-121-74-101.eu-central-1.compute.amazonaws.com:3001/api/';
 
+console.log(BACKEND_URL);
 
 const defaultOptions = {
   loop: true,
@@ -74,7 +75,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Personalized Quiz App</h1>
+      <h1>Personalized Quiz</h1>
       {isLoading ? (
         <Lottie options={defaultOptions} height={400} width={400} />
       ) : (
