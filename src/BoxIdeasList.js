@@ -1,31 +1,27 @@
+import gifticon from './icons/icongift.png'
+
 function SingleIdea(props){
     const {idea, idea_id} = props;
+
+    console.log(idea);
 
     const matches = idea?(idea.split('"')):([]);
     const descs =  matches[2]?(matches[2].split('-')):([]);
 
-    const filtered = descs.slice(1).map(item => {
-        const splited = item.split(':');
 
-        if (splited.length < 2){
-            return ['general-desc', splited[0].trim()];
-        } else {
-            return [splited[0].trim(), splited[1].trim()];
-        }
-    });
 
-    const general_desc = filtered.filter(tuple => tuple[0] === 'general-desc').map(item => item[1]).join('. ');
-    const itemlist = filtered.filter(tuple => tuple[0] !== 'general-desc');
+    const general_desc = descs[0];
+    const itemlist = descs.slice(1);
 
     return(
         <div className='single-idea' key={idea_id}>
+            <img src={gifticon} alt="gift icon" />
             <h2> {matches[1]} </h2>
             <p> {general_desc}  </p>
+            <h3> Contains: </h3>
             <ul>
             {itemlist.map((val) => (
-                <li>
-                <b>{val[0]}: </b> {val[1]}
-                </li>
+                <li> {val} </li>
             ))}
             </ul>
         </div>
@@ -36,11 +32,7 @@ function SingleIdea(props){
 function BoxIdeasList(props) {
     const {ideas} = props;
 
-    // Regular expression pattern to match sentences
-    const pattern = /\d+\.\s+/g;
-
-    // Split the paragraph into sentences
-    const sentences = ideas?(ideas.split(pattern)):([]);
+    const sentences = ideas?(ideas.split('---')):([]);
 
     // Remove any empty strings from the result
     const filteredSentences = sentences.filter(sentence => sentence.trim() !== '');
