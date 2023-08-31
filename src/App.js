@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './App.css';
 import quizData from './quizData';
+import BoxIdeasList from './BoxIdeasList';
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 
@@ -56,7 +57,7 @@ function App() {
         <div>
           <p>Quiz completed!</p>
           <h3>Box Ideas for You:</h3>
-          <p>{boxIdeas}</p>
+          <BoxIdeasList ideas={boxIdeas} />
         </div>
       );
     }

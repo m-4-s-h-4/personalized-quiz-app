@@ -1,102 +1,103 @@
 const quizData = [
     {
-        question: "How do you typically spend your free time?",
+        question: "What's your go-to drink?",
         options: [
-            "Reading, writing, or engaging with artistic activities.",
-            "Engaging in physical activities like walking, jogging, or yoga.",
-            "Exploring new cuisines and cooking.",
-            "Listening to music or playing a musical instrument.",
-            "Spending time with pets or animals."
+            "A cup of herbal tea.",
+            "Freshly squeezed juice.",
+            "Homemade smoothie.",
+            "A glass of wine.",
+            "Milk or a milk alternative."
         ]
     },
     {
-        question: "What best describes your preferred environment?",
+        question: "What's your favorite time of day?",
         options: [
-            "A cozy and quiet space for introspection.",
-            "Outdoors, surrounded by nature and fresh air.",
-            "A well-organized and aesthetically pleasing home.",
-            "A space filled with soothing music or sounds.",
-            "Any environment where I can interact with animals."
+            "Early morning when the world is still quiet.",
+            "Midday, when the sun is at its peak.",
+            "Late afternoon, perfect for a cozy meal.",
+            "Evening, when I can unwind.",
+            "Anytime, as long as I'm not alone."
         ]
     },
     {
-        question: "What type of media do you find most comforting?",
+        question: "What's your ideal vacation?",
         options: [
-            "Books, novels, or poetry.",
-            "Podcasts or guided meditation sessions.",
-            "Cooking shows or food blogs.",
-            "Instrumental music or ambient sounds.",
-            "Animal videos or documentaries."
+            "A literary tour of historic cities.",
+            "A hiking trip in the mountains.",
+            "A culinary journey through various countries.",
+            "A music festival or concert series.",
+            "A safari or animal sanctuary visit."
         ]
     },
     {
-        question: "How do you feel after social interactions?",
+        question: "What's your favorite type of movie?",
         options: [
-            "Energized and inspired.",
-            "Calmer and more centered.",
-            "Satisfied and content.",
-            "Uplifted and joyful.",
-            "Relaxed and comforted."
+            "Dramas that make you think.",
+            "Adventure films with stunning landscapes.",
+            "Comedies that are light and entertaining.",
+            "Musicals or movies with a great soundtrack.",
+            "Documentaries, especially about wildlife."
         ]
     },
     {
-        question: "What type of scents do you find appealing?",
+        question: "What's your preferred way to stay informed?",
         options: [
-            "Earthy or floral scents.",
-            "Fresh and natural scents.",
-            "Warm and comforting scents.",
-            "Clean and crisp scents.",
-            "Natural and outdoor-inspired scents."
+            "Reading in-depth articles or essays.",
+            "Watching videos or documentaries.",
+            "Following food or lifestyle blogs.",
+            "Listening to podcasts or audiobooks.",
+            "Social media, especially animal rescue stories."
         ]
     },
     {
-        question: "Which activity would you enjoy exploring?",
+        question: "What's your favorite type of weather?",
         options: [
-            "Creative writing or journaling.",
-            "Mindful walking or nature meditation.",
-            "Trying out a new recipe or cooking technique.",
-            "Learning to play a musical instrument.",
-            "Volunteering at an animal shelter or sanctuary."
+            "Rainy days perfect for reading.",
+            "Sunny and warm, ideal for outdoor activities.",
+            "Cool and breezy, perfect for a cozy meal.",
+            "A calm evening with a clear sky.",
+            "Any weather is fine, as long as I can spend it with animals."
         ]
     },
     {
-        question: "What helps you relax the most?",
+        question: "What's your favorite form of exercise?",
         options: [
-            "Getting lost in a good book.",
-            "Spending time in nature.",
-            "Preparing and enjoying a delicious meal.",
-            "Listening to soothing music.",
-            "Spending time with animals."
+            "Yoga or stretching exercises.",
+            "Outdoor sports like hiking or cycling.",
+            "Cooking or baking (it's a workout for your arms!).",
+            "Dance or rhythmic exercises.",
+            "Walking or playing with pets."
         ]
     },
     {
-        question: "What do you consider a positive accomplishment?",
+        question: "What would make you smile if you found it unexpectedly?",
         options: [
-            "Completing a creative project.",
-            "Achieving a fitness or health goal.",
-            "Preparing a successful meal from scratch.",
-            "Mastering a musical piece.",
-            "Providing care and comfort to animals."
+            "A forgotten poem scribbled on a piece of paper.",
+            "A feather or a uniquely shaped stone.",
+            "An old family recipe you thought was lost.",
+            "A mixtape from your teenage years.",
+            "A childhood toy you had a strong bond with."
+        ]
+    }
+    ,
+    {
+        question: "What's your favorite way to celebrate an achievement?",
+        options: [
+            "Writing about it in a journal or blog.",
+            "Going on a nature trip.",
+            "Hosting a dinner party.",
+            "Attending a live music event.",
+            "Visiting an animal shelter or sanctuary."
         ]
     },
     {
-        question: "How do you handle stress?",
+        question: "What's your favorite type of social gathering?",
         options: [
-            "By expressing myself through art or writing.",
-            "By practicing deep breathing and relaxation techniques.",
-            "By immersing myself in cooking or baking.",
-            "By listening to calming music.",
-            "By spending time with animals or pets."
-        ]
-    },
-    {
-        question: "Which phrase resonates with you the most?",
-        options: [
-            "\"Imagination is the only weapon in the war against reality.\" - Lewis Carroll",
-            "\"In every walk with nature, one receives far more than he seeks.\" - John Muir",
-            "\"Cooking is like love. It should be entered into with abandon or not at all.\" - Harriet van Horne",
-            "\"Where words fail, music speaks.\" - Hans Christian Andersen",
-            "\"The greatness of a nation can be judged by the way its animals are treated.\" - Mahatma Gandhi"
+            "Book clubs or literary events.",
+            "Outdoor activities with friends.",
+            "Potluck dinners or cooking classes.",
+            "Live music events or jam sessions.",
+            "Animal adoption events or pet meetups."
         ]
     }
 ];
