@@ -1,3 +1,26 @@
-single-idea{
-    width: 50rem;
+h3 {
+    margin: 1rem;
+}
+
+.ideas-list-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Individual idea box */
+.single-idea {
+    flex: 1;
+    min-width: calc(20% - 20px);
+    margin: 1rem;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Responsive design: Stacking the boxes on smaller screens */
+@media (max-width: 768px) {
+    .single-idea {
+        min-width: 100%;
+    }
 }
