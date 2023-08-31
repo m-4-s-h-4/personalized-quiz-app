@@ -1,14 +1,11 @@
 import gifticon from './icons/icongift.png'
+import './BoxIdeasList.css'
 
 function SingleIdea(props){
     const {idea, idea_id} = props;
 
-    console.log(idea);
-
     const matches = idea?(idea.split('"')):([]);
     const descs =  matches[2]?(matches[2].split('-')):([]);
-
-
 
     const general_desc = descs[0];
     const itemlist = descs.slice(1);
@@ -20,8 +17,8 @@ function SingleIdea(props){
             <p> {general_desc}  </p>
             <h3> Contains: </h3>
             <ul>
-            {itemlist.map((val) => (
-                <li> {val} </li>
+            {itemlist.map((val, index) => (
+                <li key={index}> {val} </li>
             ))}
             </ul>
         </div>
@@ -32,10 +29,12 @@ function SingleIdea(props){
 function BoxIdeasList(props) {
     const {ideas} = props;
 
+    console.log(ideas);
+
     const sentences = ideas?(ideas.split('---')):([]);
 
     // Remove any empty strings from the result
-    const filteredSentences = sentences.filter(sentence => sentence.trim() !== '');
+    const filteredSentences = sentences.filter((sentence, index) => sentence.trim() !== '' && index % 2).slice(0, 3);
 
     return (
         <div className="Ideas List">
