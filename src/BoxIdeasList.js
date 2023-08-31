@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-
 function SingleIdea(props){
     const {idea, idea_id} = props;
 
@@ -16,16 +14,22 @@ function SingleIdea(props){
         }
     });
 
+    const overall = filtered.filter(tuple => tuple[0] == 'Overall').join('. ');
+    const itemlist = filtered.filter(tuple => tuple[0] != 'Overall');
+
     console.log(filtered);
 
     return(
         <div className='single-idea' key={idea_id}>
             <h2> {matches[1]} </h2>
-            {filtered.map((val, inde) => (
-                <div key={inde} className="idea-desc">
-                <p> {val[0]} | {val[1]} </p>
-                </div>
+            <p> {overall}  </p>
+            <ul>
+            {itemlist.map((val) => (
+                <li>
+                <b>{val[0]}: </b> {val[1]}
+                </li>
             ))}
+            </ul>
         </div>
     );
 }
