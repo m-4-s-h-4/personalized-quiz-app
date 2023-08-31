@@ -14,8 +14,8 @@ function SingleIdea(props){
         }
     });
 
-    const overall = filtered.filter(tuple => tuple[0] == 'Overall').join('. ');
-    const itemlist = filtered.filter(tuple => tuple[0] != 'Overall');
+    const overall = filtered.filter(tuple => tuple[0] === 'Overall').join('. ');
+    const itemlist = filtered.filter(tuple => tuple[0] !== 'Overall');
 
     console.log(filtered);
 
