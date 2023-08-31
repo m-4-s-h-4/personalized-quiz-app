@@ -8,21 +8,19 @@ function SingleIdea(props){
         const splited = item.split(':');
 
         if (splited.length < 2){
-            return ['Overall', splited[0].trim()];
+            return ['general-desc', splited[0].trim()];
         } else {
             return [splited[0].trim(), splited[1].trim()];
         }
     });
 
-    const overall = filtered.filter(tuple => tuple[0] === 'Overall').join('. ');
-    const itemlist = filtered.filter(tuple => tuple[0] !== 'Overall');
-
-    console.log(filtered);
+    const general_desc = filtered.filter(tuple => tuple[0] === 'general-desc').map(item => item[1]).join('. ');
+    const itemlist = filtered.filter(tuple => tuple[0] !== 'general-desc');
 
     return(
         <div className='single-idea' key={idea_id}>
             <h2> {matches[1]} </h2>
-            <p> {overall}  </p>
+            <p> {general_desc}  </p>
             <ul>
             {itemlist.map((val) => (
                 <li>
