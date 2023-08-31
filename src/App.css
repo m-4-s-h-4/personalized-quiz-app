@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Gluten:wght@300&family=Nunito:wght@300&display=swap');
+
 .App {
   display: flex;
   flex-direction: column;
@@ -5,7 +7,7 @@
   justify-content: center;
   min-height: 100vh;
   background-color: #f4f4f4;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Gluten', cursive;
 }
 
 h1 {
@@ -36,10 +38,11 @@ button {
   height: 80px;
   /* Fixed height */
   font-size: 1rem;
+  font-family: 'Gluten', cursive;
   cursor: pointer;
   border: none;
   border-radius: 5px;
-  background-color: #007bff;
+  background-color: rgba(215, 58, 91, 0.8);
   color: white;
   transition: background-color 0.3s ease;
   display: flex;
@@ -55,7 +58,7 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: rgba(146, 28, 53, 0.8);
 }
 
 /* Add media queries for responsiveness */
@@ -70,7 +73,7 @@ button:hover {
 
   p {
     font-size: 1.2rem;
-    width: 250px;
+    width: 0px;
   }
 
   button {
