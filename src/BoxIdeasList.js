@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-
 function SingleIdea(props){
     const {idea, idea_id} = props;
 
@@ -10,22 +8,26 @@ function SingleIdea(props){
         const splited = item.split(':');
 
         if (splited.length < 2){
-            return ['Overall', splited[0].trim()];
+            return ['general-desc', splited[0].trim()];
         } else {
             return [splited[0].trim(), splited[1].trim()];
         }
     });
 
-    console.log(filtered);
+    const general_desc = filtered.filter(tuple => tuple[0] === 'general-desc').map(item => item[1]).join('. ');
+    const itemlist = filtered.filter(tuple => tuple[0] !== 'general-desc');
 
     return(
         <div className='single-idea' key={idea_id}>
             <h2> {matches[1]} </h2>
-            {filtered.map((val, inde) => (
-                <div key={inde} className="idea-desc">
-                <p> {val[0]} | {val[1]} </p>
-                </div>
+            <p> {general_desc}  </p>
+            <ul>
+            {itemlist.map((val) => (
+                <li>
+                <b>{val[0]}: </b> {val[1]}
+                </li>
             ))}
+            </ul>
         </div>
     );
 }
